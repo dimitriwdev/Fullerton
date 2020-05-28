@@ -1,0 +1,376 @@
+
+/*----------------------------- base style -------------------------------*/
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    background-color: #fff;
+    color: #000;
+    
+}
+
+h1{
+    font-size: 3em;
+    padding: 2rem 0 1rem 0;
+    border-bottom: 1px solid #000; 
+    text-transform: capitalize;
+}
+
+h2{
+    font-size: 1.5em;
+    padding:  0.5em 0 0.5em 0;
+    margin-top: 1em;
+    border-bottom: 1px solid #000;
+    text-transform: capitalize; 
+    cursor: pointer;
+}
+
+h2:hover{
+    background-color: aliceblue;
+}
+
+aside h1{
+    font-size: 1.5em;
+    padding: 0;
+    margin-top: 1em;
+    text-transform: uppercase;
+    color: firebrick;
+    border-bottom: none; 
+}
+
+p{
+    font-size: 1em;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+nav a{
+    color: #fff;
+}
+
+
+
+/*-------------------------- End of base style -------------------------*/
+
+/*------------------------------- Header -------------------------------*/
+
+header{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #000;
+    border-bottom: 5px solid rgb(105,105,105);
+}
+
+/*  Logo   */
+#logo{
+    flex: 0 1 70%;
+    padding: 1em;
+}
+/*------------------------- Navigation ----------------------------*/
+
+/*-------------------------- Hamburger menu ---------------------------*/
+#hamburger{
+    flex: 0 1 5%;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    margin-right: 2em;
+}
+
+#hamburger span{
+    display: block;
+    background-color: #fff;
+    height: 5px;
+    width: 30px;
+    margin-bottom: 5px;
+}
+#hamburger span:last-child{
+    margin-bottom: 0;    
+}
+/*----------------------End of Hamburger menu ---------------------------*/
+
+nav{
+    display: none;
+	width: 100%;
+    margin: 1em 0;
+	}
+    
+nav a{
+    display: block;
+    width: 100%;
+    height: 5vh;
+    line-height: 5vh;
+    background-color: firebrick;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+nav a:hover, nav a:active
+	{
+		background-color: #fff;
+		color: firebrick;
+    }
+    
+/*---------------------------- icon menu ---------------------------*/
+
+#icons{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 5em auto 1em auto;
+}
+
+#icons p{
+    display: none;
+    color: #fff;
+    text-transform: capitalize;
+}
+#menuIcon{
+    display: flex;
+}
+
+#menuIcon li{
+    padding-right: 1em;
+}
+
+/*---------------------------- End of icon menu ---------------------------*/
+    
+/*----------------------- End of Navigation -------------------------*/
+
+/*--------------------------------------- End of Header ---------------------------------------*/
+
+/*----------------------------------- largeImageContainer --------------------------------------*/
+
+#largeImageContainer{
+    background-color: rgb(50,50,50);
+}
+
+#image{
+    display: flex;
+    justify-content: center;
+    background-image: url("../images/banner1.jpg");
+    max-width: 100vw;
+    height: 60vh;
+    background-size: cover;
+    
+}
+
+#largeImageContainer p{
+    color: #fff;
+    border-top: 5px solid rgb(105,105,105);
+    padding: 1em 0;
+    text-align: center;
+}
+
+/*-------------------------------- End of largeImageContainer -------------------------------*/
+
+/*------------------------------------Greetings--------------------------------------*/
+
+#greetingBox{
+    background-color: black;
+    color: #fff;
+    padding: 0.5em;
+}
+
+#greetUserBox{
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+    font-weight: bold;
+    padding-top: 1em; 
+}
+
+/*--------------------------------End of greeting------------------------------------*/
+
+/*----------------------------------- sections --------------------------------------*/
+
+#content{
+    padding: 0 2em;
+}
+
+#content p{
+    padding-top: 1em;
+}
+
+#imagesContent{
+    margin: 1rem auto;
+    width: 50%;
+}
+
+#imagesContent img{
+    
+    padding: 0.5em;
+    border: 1px solid #000;
+    
+}
+
+#imagesContent img:first-child{
+    margin-bottom: 0.5em;
+}
+
+/*----------------------------------- End of sections --------------------------------------*/
+
+
+/*----------------------------------- aside --------------------------------------*/
+
+aside{
+    padding: 1em 2em;
+}
+
+aside p{
+    margin: 1rem 0;
+}
+
+/*----------------------------------- End of aside --------------------------------------*/
+
+/*------------------------ footer ----------------------*/
+
+footer{
+  background-color: #000;
+  display: flex;
+  justify-content: center; 
+  padding: 1em;
+  margin-top: 1em;
+}
+
+footer p {
+    font-size: 0.8em;
+    color: #fff;
+}
+
+/*---------------------- End of Footer ----------------------*/
+
+
+
+
+/*--------------------------------- media queries ---------------------------------*/
+
+
+@media only screen and (min-width: 768px){
+
+    #largeImageContainer p{
+        border-top: none;
+    }
+
+    #imagesContent{
+        display: flex;
+        justify-content: center;
+        width: auto;    /* in order to remove the width applied on mobile */
+    }
+
+    #imagesContent img{
+        flex: 0 1 50%;
+        height: 15vh;
+        margin: 1rem 0.5rem;
+    }
+
+    #bold{
+        font-weight: bold;
+    }
+
+    /* aside */
+
+    aside img{
+        float: left;
+        margin: 0.5rem 1rem;
+    }
+
+    /*  Footer  */
+    
+    footer{
+        clear: left;
+    }
+}
+
+
+@media only screen and (min-width: 1300px){
+
+    /*------------- header ----------------*/
+
+    #logo{
+        flex: 1 1 70%;
+    }
+
+    #icons{
+        margin: 2em 0;
+        flex: 1 1 25%;
+        justify-content: flex-start;
+    }
+
+    #icons p{
+        display: block;
+        width: 100%;
+    }
+
+    #menuIcon{
+        padding: 0.5em 0;
+        
+    }
+    
+    /*------------ navigation -------------*/
+    
+    #hamburger{
+        display: none;
+    }
+  
+    nav{
+        display: flex;
+        Max-width: 100%;
+        order: 1;   /* to move after menuIcon */
+        margin: 0;
+        background-color: rgb(50,50,50);
+    }
+
+    nav ul{
+        display: flex;
+    }
+    
+    nav li{
+        display: flex;
+        justify-content: space-around;
+    }
+    nav ul a{
+        display: block;
+        background-color: transparent;
+        border-bottom: none;
+        padding: 0.5em 1em;
+    }
+
+    nav a:hover{
+        color: black;
+    }
+
+    /*----------- End of Navigation ------------*/
+    /*-------------- mainContent ---------------*/
+    #image{
+        background-image: url("../images/banner4.jpg");
+    }
+    
+    #mainContent{
+        display: flex;
+     }
+    /*----------- End of mainContent -----------*/
+    /*------------------ aside -----------------*/
+
+    aside{
+         max-width: 15%;
+         margin-top: 1rem;
+     }
+
+    aside img{
+        float: none;
+        margin: auto;
+    }
+
+    /*-------------- End of aside -------------*/
+
+}
